@@ -1,40 +1,70 @@
-import TeamCard from "./TeamCard";
+"use client";
 
-// Team member data
+import React from "react";
+import TeamCard from "./TeamCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 const teamMembers = [
   {
+    image: "/images/duck.png",
     name: "Muiz Khan",
-    bio: "Born and raised in the icy swamps of Peshawar. Muiz Khan was no stranger to danger",
-    image: "/duck.png", // Add this image to /public
+    role: "Frontend Developer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
   },
   {
+    image: "/images/cat.png",
     name: "Taha Umar",
-    bio: "Lomri bhi taha umar ko kehti 'thas fished up'",
-    image: "/cat.png",
+    role: "Backend Developer",
+    description:
+      "Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
   },
   {
+    image: "/images/duck.png",
     name: "Hamza Afzal",
-    bio: "Once he killed a Siraiki with his eyelash muscles",
-    image: "/duck.png",
+    role: "UI/UX Designer",
+    description:
+      "Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
   },
   {
+    image: "/images/cat.png",
     name: "Ammad Ali",
-    bio: "Ye banda interviewer se bhi GPA chupata",
-    image: "/cat.png",
+    role: "Full Stack Developer",
+    description:
+      "Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.",
   },
 ];
 
-export default function TeamSection() {
+const TeamSection = () => {
   return (
-    <section className="bg-[#2F43A6] px-4 py-6 space-y-6">
-      {teamMembers.map((member, index) => (
-        <TeamCard
-          key={index}
-          name={member.name}
-          bio={member.bio}
-          image={member.image}
-        />
-      ))}
+    <section className="py-16 px-4 bg-[#2F43A6]">
+      <div className="max-w-7xl mx-auto">
+        {/* Rounded Container with shadow */}
+        <div className="bg-white rounded-2xl shadow-2xl p-8">
+          {/* Swiper Slider inside */}
+          <Swiper
+            navigation
+            modules={[Navigation]}
+            spaceBetween={30}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {teamMembers.map((member, index) => (
+              <SwiperSlide key={index}>
+                <TeamCard {...member} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </section>
   );
-}
+};
+
+export default TeamSection;

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/irish-grover": "^5.2.5",
+    "@heroicons/react": "^2.2.0",
     "autoprefixer": "^10.4.21",
     "framer-motion": "^12.9.4",
     "next": "^15.3.1",

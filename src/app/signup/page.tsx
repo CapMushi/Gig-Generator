@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import SignUpForm from "@/components/SignUpForm";
@@ -26,7 +26,12 @@ export default function SignUpPage() {
         <div className="flex flex-col items-left justify-center flex-grow space-y-16 mt-20">
           {/* Cat Section */}
           <div className="relative text-center">
-            <Image src="/images/smiling_cat.png" alt="Cat" width={250} height={250} />
+            <Image
+              src="/images/smiling_cat.png"
+              alt="Cat"
+              width={250}
+              height={250}
+            />
             <div className="absolute -top-1 -right-[-190px] bg-white text-black text-sm px-8 py-4 rounded-full border border-black font-irish">
               Welcome! <br /> Join the Club!
               <div className="absolute -bottom-4 left-1 w-4 h-4 bg-white rounded-full border border-black"></div>
@@ -47,9 +52,24 @@ export default function SignUpPage() {
         <div className="mt-5 text-sm">
           <p className="text-center mb-2">Follow Along</p>
           <div className="flex justify-center space-x-4">
-            <Image src="/icons/instagram.svg" alt="Instagram" width={20} height={20} />
-            <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-            <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+            <Image
+              src="/icons/instagram.svg"
+              alt="Instagram"
+              width={20}
+              height={20}
+            />
+            <Image
+              src="/icons/linkedin.svg"
+              alt="LinkedIn"
+              width={20}
+              height={20}
+            />
+            <Image
+              src="/icons/whatsapp.svg"
+              alt="WhatsApp"
+              width={20}
+              height={20}
+            />
           </div>
         </div>
 
@@ -71,14 +91,27 @@ export default function SignUpPage() {
       {/* Right Section */}
       <div className="w-1/2 bg-peach-50 p-16 flex flex-col justify-center items-center">
         <div className="p-4 rounded-md">
-          <Image src="/images/bold_logo.png" alt="Main Icon" width={300} height={280} />
+          <Image
+            src="/images/bold_logo.png"
+            alt="Main Icon"
+            width={300}
+            height={280}
+          />
         </div>
         <h2 className="text-2xl font-bold mt-4 mb-6">GIG-GENERATOR</h2>
 
         {signupSubmitted ? (
           <div className="text-center space-y-6 animate-fade-in">
-            <Image src="/images/duck.png" alt="duck" width={96} height={96} className="mx-auto animate-bounce" />
-            <h3 className="text-2xl font-bold text-blue-800">You're Signed Up!</h3>
+            <Image
+              src="/images/duck.png"
+              alt="duck"
+              width={96}
+              height={96}
+              className="mx-auto animate-bounce"
+            />
+            <h3 className="text-2xl font-bold text-blue-800">
+              You're Signed Up!
+            </h3>
             <p className="text-base text-gray-700">
               Welcome aboard! You can now log in and start creating gigs.
             </p>

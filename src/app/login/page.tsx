@@ -19,7 +19,12 @@ export default function LoginPage() {
         <div className="flex flex-col items-left justify-center flex-grow space-y-16 mt-20">
           {/* Cat Section */}
           <div className="relative text-center">
-            <Image src="/images/smiling_cat.png" alt="Cat" width={250} height={250} />
+            <Image
+              src="/images/smiling_cat.png"
+              alt="Cat"
+              width={250}
+              height={250}
+            />
             <div className="absolute -top-1 -right-[-190px] bg-white text-black text-sm px-8 py-4 rounded-full border border-black font-irish">
               Back again, Huh? <br /> Let’s get you In!
               <div className="absolute -bottom-4 left-1 w-4 h-4 bg-white rounded-full border border-black"></div>
@@ -40,9 +45,24 @@ export default function LoginPage() {
         <div className="mt-5 text-sm">
           <p className="text-center mb-2">Follow Along</p>
           <div className="flex justify-center space-x-4">
-            <Image src="/icons/instagram.svg" alt="Instagram" width={20} height={20} />
-            <Image src="/icons/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-            <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+            <Image
+              src="/icons/instagram.svg"
+              alt="Instagram"
+              width={20}
+              height={20}
+            />
+            <Image
+              src="/icons/linkedin.svg"
+              alt="LinkedIn"
+              width={20}
+              height={20}
+            />
+            <Image
+              src="/icons/whatsapp.svg"
+              alt="WhatsApp"
+              width={20}
+              height={20}
+            />
           </div>
         </div>
 
@@ -54,7 +74,7 @@ export default function LoginPage() {
             </button>
           </Link>
           <Link href="/signup">
-            <button className= "text-white font-semibold px-8 py-2 rounded">
+            <button className="text-white font-semibold px-8 py-2 rounded">
               SIGN UP
             </button>
           </Link>
@@ -64,7 +84,12 @@ export default function LoginPage() {
       {/* Right Section */}
       <div className="w-1/2 bg-peach-50 p-16 flex flex-col justify-center items-center">
         <div className="p-4 rounded-md">
-          <Image src="/images/bold_logo.png" alt="Main Icon" width={300} height={280} />
+          <Image
+            src="/images/bold_logo.png"
+            alt="Main Icon"
+            width={300}
+            height={280}
+          />
         </div>
         <h2 className="text-2xl font-bold mt-4 mb-6">GIG-GENERATOR</h2>
         <LoginForm />

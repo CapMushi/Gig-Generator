@@ -15,7 +15,8 @@
     "incremental": true,
     "baseUrl": ".", // ✅ Project root
     "paths": {
-      "@/*": ["src/*"] // ✅ Maps @/something → src/something
+      "@lib/*": ["lib/*"],
+      "@models/*": ["models/*"]
     },
     "plugins": [
       {

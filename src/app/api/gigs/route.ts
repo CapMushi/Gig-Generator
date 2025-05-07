@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import connectToDatabase from "@/lib/mongodb";
-import Gig from "@/models/Gig";
+import connectToDatabase from "@lib/mongodb";
+import Gig from "@models/Gig";
 
 export async function POST(req: Request) {
   try {

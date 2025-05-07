@@ -15,8 +15,17 @@ const config: Config = {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
+      colors: {
+        peach: {
+          50: '#FBE4D6', // Light peach background
+        },
+      },
+      fontFamily: {
+            irish: ["'Irish Grover'", "cursive"],
+          },
     },
   },
   plugins: [],
 };
+
 export default config;

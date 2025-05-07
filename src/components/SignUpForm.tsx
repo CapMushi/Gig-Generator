@@ -3,7 +3,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-const SignUpForm = () => {
+interface SignUpFormProps {
+  onSubmit?: () => void;
+}
+
+const SignUpForm = ({ onSubmit }: SignUpFormProps) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,6 +20,9 @@ const SignUpForm = () => {
       return;
     }
     console.log({ name, email, password });
+    if (onSubmit) {
+      onSubmit(); // trigger confirmation message in parent
+    }
   };
 
   return (

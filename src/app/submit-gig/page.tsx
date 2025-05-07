@@ -43,7 +43,7 @@ export default function SubmitGigPage() {
               <img src="/images/mascot-cat.png" alt="Mascot Cat" className="w-24 mx-auto animate-bounce" />
               <h3 className="text-2xl font-bold text-[#1e3a8a]">Submission Received!</h3>
               <p className="text-base text-gray-700">
-                We’ll reach out to your WhatsApp number shortly to get started!
+                We will reach out to your WhatsApp number shortly to get started!
               </p>
             </div>
           ) : (

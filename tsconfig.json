@@ -13,15 +13,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".", // ✅ Project root
+    "paths": {
+      "@/*": ["src/*"] // ✅ Maps @/something → src/something
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "baseUrl": ".", // ✅ Add this  for mongodb
-    "paths": {
-      "@/*": ["./*"] // ✅ Update this to include lib, models, etc. for mongodb
-    }
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

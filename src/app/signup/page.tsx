@@ -1,12 +1,16 @@
 'use client';
 
+import { useState } from "react";
 import SignUpForm from "@/components/SignUpForm";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function SignUpPage() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [signupSubmitted, setSignupSubmitted] = useState(false);
+
+  const handleSignup = () => {
+    setSignupSubmitted(true);
+  };
 
   return (
     <div className="flex min-h-screen font-sans">
@@ -66,19 +70,21 @@ export default function SignUpPage() {
 
       {/* Right Section */}
       <div className="w-1/2 bg-peach-50 p-16 flex flex-col justify-center items-center">
-        {formSubmitted ? (
-          <div className="max-w-xl mx-auto text-center space-y-6 animate-fade-in">
-            <Image src="/images/duck.png" alt="Mascot Duck" width={96} height={96} className="mx-auto animate-bounce" />
-            <h3 className="text-2xl font-bold text-blue-800">Sign-Up Successful!</h3>
+        <div className="p-4 rounded-md">
+          <Image src="/images/bold_logo.png" alt="Main Icon" width={300} height={280} />
+        </div>
+        <h2 className="text-2xl font-bold mt-4 mb-6">GIG-GENERATOR</h2>
+
+        {signupSubmitted ? (
+          <div className="text-center space-y-6 animate-fade-in">
+            <Image src="/images/duck.png" alt="Duck" width={96} height={96} className="mx-auto animate-bounce" />
+            <h3 className="text-2xl font-bold text-blue-800">You're Signed Up!</h3>
             <p className="text-base text-gray-700">
-              Welcome aboard! You're all set to start using Gig-Generator.
+              Welcome aboard! You can now log in and start creating gigs.
             </p>
           </div>
         ) : (
-          <>
-            <h2 className="text-2xl font-bold mt-4 mb-6">GIG-GENERATOR</h2>
-            <SignUpForm onSubmit={() => setFormSubmitted(true)} />
-          </>
+          <SignUpForm onSubmit={handleSignup} />
         )}
       </div>
     </div>

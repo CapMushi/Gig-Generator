@@ -1,4 +1,3 @@
-// File: src/app/page.tsx
 import Header from "../components/Header";
 import TeamSection from "../components/TeamSection";
 import Footer from "../components/Footer";
@@ -12,7 +11,7 @@ export default function Home() {
       <section className="py-0 px-6">
         <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-12 text-left">
           {/* Logo */}
-          <div className="w-full lg:w-1/2 flex justify-end">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <img
               src="/images/logo.png"
               alt="Gig Generator Logo"
@@ -21,7 +20,7 @@ export default function Home() {
           </div>
 
           {/* Text Block */}
-          <div className="text-left w-full lg:w-1/2 max-w-xl lg:max-w-2xl flex flex-col items-center lg:items-start">
+          <div className="w-full lg:w-1/2 max-w-xl lg:max-w-2xl flex flex-col items-center lg:items-start text-center lg:text-left">
             <h1 className="text-5xl lg:text-7xl font-extrabold flex flex-col items-start gap-2 animate-fade-in">
               <div className="flex items-center gap-2">
                 <span
@@ -42,7 +41,7 @@ export default function Home() {
                 <span className="text-5xl lg:text-6xl">R</span>
               </div>
             </h1>
-            <p className="mt-6 text-base lg:text-lg xl:text-xl animate-fade-in delay-200 text-center tracking-widest leading-normal max-w-md">
+            <p className="mt-6 text-base lg:text-lg xl:text-xl animate-fade-in delay-200 tracking-widest leading-normal max-w-md">
               Stuck on an assignment? Call the pros who’ve already <br />
               <span className="block">cried, crumbled, and conquered —</span>
               <span className="block">
@@ -53,13 +52,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet The Team Section */}
-      <section className="bg-black text-white text-center py-6">
-        <h2 className="text-2xl lg:text-3xl font-bold">MEET THE TEAM</h2>
+      {/* Meet The Team Header with Triangle */}
+      <section className="relative bg-black text-white text-center overflow-visible">
+        {/* Responsive Centered Text */}
+        <div className="flex items-center justify-center h-16 sm:h-20 md:h-18">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+            MEET THE TEAM
+          </h2>
+        </div>
+
+        {/* Attached Triangle */}
+        <div
+          className="absolute left-1/2 bottom-0 transform translate-y-full -translate-x-1/2 w-0 h-0 
+               border-l-[16px] border-r-[16px] border-t-[16px] 
+               border-l-transparent border-r-transparent border-t-black"
+        ></div>
       </section>
 
       <TeamSection />
-
       <Footer />
     </main>
   );

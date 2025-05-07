@@ -18,8 +18,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // ✅ Add this  for mongodb
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"] // ✅ Update this to include lib, models, etc. for mongodb
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

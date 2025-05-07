@@ -77,7 +77,7 @@ export default function SignUpPage() {
 
         {signupSubmitted ? (
           <div className="text-center space-y-6 animate-fade-in">
-            <Image src="/images/duck.png" alt="Duck" width={96} height={96} className="mx-auto animate-bounce" />
+            <Image src="/images/duck.png" alt="duck" width={96} height={96} className="mx-auto animate-bounce" />
             <h3 className="text-2xl font-bold text-blue-800">You're Signed Up!</h3>
             <p className="text-base text-gray-700">
               Welcome aboard! You can now log in and start creating gigs.

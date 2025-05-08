@@ -1,9 +1,23 @@
 'use client';
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export default function PricingInstructionsPage() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Simulate form submission delay
+    setTimeout(() => {
+      setSubmitted(true);
+      // Reset the form after a delay
+      setTimeout(() => setSubmitted(false), 3000);
+    }, 500);
+  };
+
   return (
     <>
       <Header />
@@ -75,8 +89,8 @@ export default function PricingInstructionsPage() {
 
             <section>
               <h3 className="text-2xl font-bold text-[#1e3a8a] mb-2">📝 Price Negotiation</h3>
-              <p>Found our quote too high? You can send us a genuine request to reconsider:</p>
-              <form className="mt-4 space-y-4">
+              <p>Found our price too high? You can send us a feedback request to reconsider:</p>
+              <form className="mt-4 space-y-4 relative" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   placeholder="Your Name"
@@ -101,6 +115,37 @@ export default function PricingInstructionsPage() {
                 >
                   Submit Request
                 </button>
+
+                <AnimatePresence>
+                  {submitted && (
+                    <motion.div
+                      className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-90 flex flex-col items-center justify-center rounded-lg"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      <motion.img
+                        src="/images/duck.png"
+                        alt="Success Duck"
+                        className="w-24 h-24 mb-4 animate-bounce"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      />
+                      <motion.h4
+                        className="text-xl font-bold text-blue-800"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 1.2 }}
+                      >
+                        Feedback Submitted!
+                      </motion.h4>
+                      <p className="text-gray-600 mt-2 text-center">
+                        Thank you for your input. We'll review your request and get back to you soon.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </form>
             </section>
           </div>

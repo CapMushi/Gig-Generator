@@ -88,7 +88,7 @@ const DashboardPage = () => {
             animate={{ rotate: 0, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Image src="/images/cat.png" alt="Funny Cat" width={180} height={180} className="rounded-xl" />
+            <Image src="/images/smiling_cat.png" alt="Funny Cat" width={180} height={180} className="rounded-xl" />
           </motion.div>
           <p className="text-center text-sm text-[#d1d5ff] italic">
             "Keep grinding... even if you're not feline it today!"

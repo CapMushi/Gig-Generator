@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useState } from 'react';
+import Image from "next/image";
+import { useState } from "react";
 
 interface SignUpFormProps {
   onSubmit?: () => void;
 }
 
 const SignUpForm = ({ onSubmit }: SignUpFormProps) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,7 +31,13 @@ const SignUpForm = ({ onSubmit }: SignUpFormProps) => {
       className="flex flex-col gap-4 w-full max-w-sm mx-auto"
     >
       <div className="flex items-center border-b border-gray-300 py-2">
-        <Image src="/icons/person.svg" alt="Name Icon" width={20} height={20} className="mr-3" />
+        <Image
+          src="/icons/person.svg"
+          alt="Name Icon"
+          width={20}
+          height={20}
+          className="mr-3"
+        />
         <input
           type="text"
           placeholder="Name"
@@ -43,7 +49,13 @@ const SignUpForm = ({ onSubmit }: SignUpFormProps) => {
       </div>
 
       <div className="flex items-center border-b border-gray-300 py-2">
-        <Image src="/icons/email.svg" alt="Email Icon" width={20} height={20} className="mr-3" />
+        <Image
+          src="/icons/email.svg"
+          alt="Email Icon"
+          width={20}
+          height={20}
+          className="mr-3"
+        />
         <input
           type="email"
           placeholder="Email"
@@ -55,7 +67,13 @@ const SignUpForm = ({ onSubmit }: SignUpFormProps) => {
       </div>
 
       <div className="flex items-center border-b border-gray-300 py-2">
-        <Image src="/icons/lock.svg" alt="Password Icon" width={20} height={20} className="mr-3" />
+        <Image
+          src="/icons/lock.svg"
+          alt="Password Icon"
+          width={20}
+          height={20}
+          className="mr-3"
+        />
         <input
           type="password"
           placeholder="Password"
@@ -67,7 +85,13 @@ const SignUpForm = ({ onSubmit }: SignUpFormProps) => {
       </div>
 
       <div className="flex items-center border-b border-gray-300 py-2">
-        <Image src="/icons/lock.svg" alt="Confirm Password Icon" width={20} height={20} className="mr-3" />
+        <Image
+          src="/icons/lock.svg"
+          alt="Confirm Password Icon"
+          width={20}
+          height={20}
+          className="mr-3"
+        />
         <input
           type="password"
           placeholder="Confirm Password"

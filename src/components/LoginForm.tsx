@@ -2,14 +2,23 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-const LoginForm = () => {
+const LoginForm = ({ onLoginSuccess }: { onLoginSuccess?: () => void }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log({ email, password });
+
+    // Simulate successful login
+    if (onLoginSuccess) {
+      onLoginSuccess(); // uses parent-defined navigation
+    } else {
+      router.push('/'); // fallback navigation
+    }
   };
 
   return (

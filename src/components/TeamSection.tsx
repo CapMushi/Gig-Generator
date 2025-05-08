@@ -16,7 +16,7 @@ const teamMembers = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.",
   },
   {
-    image: "/images/cat.png",
+    image: "/images/smiling_cat.png",
     name: "Taha Umar",
     role: "Backend Developer",
     description:
@@ -30,7 +30,7 @@ const teamMembers = [
       "Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
   },
   {
-    image: "/images/cat.png",
+    image: "/images/smiling_cat.png",
     name: "Ammad Ali",
     role: "Full Stack Developer",
     description:

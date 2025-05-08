@@ -1,75 +1,95 @@
-import Header from "../components/Header";
-import TeamSection from "../components/TeamSection";
-import Footer from "../components/Footer";
+import React from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="bg-[#2F43A6] text-white min-h-screen">
+    <main className="flex flex-col min-h-screen bg-[#2F43A6] text-white">
       <Header />
 
+      {/* Logo under Header */}
+      <div className="px-6 pt-6">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={120}
+          height={120}
+          className="object-contain"
+        />
+      </div>
+
       {/* Hero Section */}
-      <section className="py-0 px-6">
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-12 text-left">
-          {/* Logo */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <img
-              src="/images/logo.png"
-              alt="Gig Generator Logo"
-              className="w-72 lg:w-96 xl:w-[28rem]"
+      <section className="flex items-center justify-center flex-col text-center py-32 px-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-wide">
+          INNOVATE THE JOB HUNT
+        </h1>
+        <button className="flex items-center gap-2 bg-gradient-to-r from-white to-gray-300 text-[#2F43A6] font-semibold px-6 py-3 rounded-full hover:scale-105 hover:shadow-xl transition duration-300 animate-pulse">
+          Let&apos;s get started
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 12h14M12 5l7 7-7 7"
             />
+          </svg>
+        </button>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="bg-black text-white py-20 px-6">
+        <h2 className="text-4xl font-bold mb-12">HOW IT WORKS?</h2>
+
+        <div className="space-y-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div className="md:w-1/2">
+              <h3 className="text-xl font-semibold">Step 1</h3>
+              <p className="mt-2 text-gray-300">
+                Upload your resume and let our AI do the matching.
+              </p>
+            </div>
+            <div className="md:w-1/2 hidden md:flex justify-end"></div>
           </div>
 
-          {/* Text Block */}
-          <div className="w-full lg:w-1/2 max-w-xl lg:max-w-2xl flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h1 className="text-5xl lg:text-7xl font-extrabold flex flex-col items-start gap-2 animate-fade-in">
-              <div className="flex items-center gap-2">
-                <span
-                  className="text-5xl lg:text-6xl text-white"
-                  style={{ WebkitTextStroke: "1px white" }}
-                >
-                  G
-                </span>
-                <span className="text-5xl lg:text-6xl">IG-</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-5xl lg:text-6xl">GENERAT</span>
-                <img
-                  src="/icons/cog.svg"
-                  alt="Cog Icon"
-                  className="inline w-14 lg:w-16 h-14 lg:h-16 animate-spin"
-                />
-                <span className="text-5xl lg:text-6xl">R</span>
-              </div>
-            </h1>
-            <p className="mt-6 text-base lg:text-lg xl:text-xl animate-fade-in delay-200 tracking-widest leading-normal max-w-md">
-              Stuck on an assignment? Call the pros who’ve already <br />
-              <span className="block">cried, crumbled, and conquered —</span>
-              <span className="block">
-                you don’t have to rot your brain too!
-              </span>
-            </p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div className="md:w-1/2 hidden md:flex justify-start"></div>
+            <div className="md:w-1/2 text-right">
+              <h3 className="text-xl font-semibold">Step 2</h3>
+              <p className="mt-2 text-gray-300">
+                Explore matching gigs curated just for your skills.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div className="md:w-1/2">
+              <h3 className="text-xl font-semibold">Step 3</h3>
+              <p className="mt-2 text-gray-300">
+                Apply directly and track your applications seamlessly.
+              </p>
+            </div>
+            <div className="md:w-1/2 hidden md:flex justify-end"></div>
           </div>
         </div>
       </section>
 
-      {/* Meet The Team Header with Triangle */}
-      <section className="relative bg-black text-white text-center overflow-visible">
-        {/* Responsive Centered Text */}
-        <div className="flex items-center justify-center h-16 sm:h-20 md:h-18">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
-            MEET THE TEAM
-          </h2>
-        </div>
-
-        {/* Attached Triangle */}
-        <div
-          className="absolute left-1/2 bottom-0 transform translate-y-full -translate-x-1/2 w-0 h-0 
-               border-l-[16px] border-r-[16px] border-t-[16px] 
-               border-l-transparent border-r-transparent border-t-black"
-        ></div>
+      {/* Objective Section */}
+      <section className="bg-white text-black py-20 px-6">
+        <h2 className="text-4xl font-bold mb-6">OUR OBJECTIVE:</h2>
+        <p className="text-lg max-w-4xl">
+          Our goal is to simplify and personalize the job hunt experience using
+          AI-driven gig matching. We empower individuals by connecting them to
+          opportunities that fit their unique skillsets.
+        </p>
       </section>
 
-      <TeamSection />
       <Footer />
     </main>
   );

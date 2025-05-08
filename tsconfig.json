@@ -15,6 +15,7 @@
     "incremental": true,
     "baseUrl": ".", // ✅ Project root
     "paths": {
+      "@/*": ["src/*"],
       "@lib/*": ["lib/*"],
       "@models/*": ["models/*"]
     },

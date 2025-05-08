@@ -1,7 +1,6 @@
-// File: src/components/Footer.tsx
 export default function Footer() {
   return (
-    <footer className="bg-[#FFEBDD] text-black mt-12 mx-4 rounded-xl px-6 py-3 shadow-md font-sans">
+    <footer className="bg-[#FFEBDD] text-black mt-0 w-full rounded-t-3xl px-6 py-3 shadow-md font-sans">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
         {/* Left: Logo and Website Name */}
         <div className="flex items-center gap-3">

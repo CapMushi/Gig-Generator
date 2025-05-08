@@ -28,13 +28,12 @@ export default function Header() {
 
           {menuOpen && (
             <div className="absolute left-0 mt-2 w-44 bg-white/80 backdrop-blur-md border border-[#2F43A6] rounded-lg shadow-xl z-50">
-              {userType === "client" ? (
-                <DropdownLink href="/my-gigs" label="My Gigs" />
-              ) : (
-                <DropdownLink href="/admin" label="Gig Pool" />
-              )}
+              <DropdownLink
+                href={userType === "client" ? "/Dashboard" : "/admin"}
+                label="My Gigs"
+              />
               <hr className="border-t border-[#2F43A6] opacity-30 my-1" />
-              <DropdownLink href="/instructions" label="Instructions" />
+              <DropdownLink href="/pricing-instructions" label="Instructions" />
             </div>
           )}
         </div>
@@ -57,13 +56,13 @@ export default function Header() {
         <NavButton href="/" label="HOME" active={pathname === "/"} />
         <NavButton href="/about" label="ABOUT" active={pathname === "/about"} />
         <NavButton
-          href="/gig-gen"
+          href="/submit-gig"
           label="GIG-GEN"
           active={pathname === "/gig-gen"}
         />
         <NavButton
-          href="/contact"
-          label="CONTACT US"
+          href="/signup"
+          label="SIGN UP"
           active={pathname === "/contact"}
         />
       </nav>

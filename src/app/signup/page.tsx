@@ -17,10 +17,10 @@ export default function SignUpPage() {
       {/* Left Section */}
       <div className="w-1/2 bg-blue-800 text-white flex flex-col p-8 relative">
         {/* Top Logo */}
-        <div>
+        <Link href="/" className="flex items-center space-x-2">
           <Image src="/images/logo.png" alt="Logo" width={40} height={40} />
           <h1 className="text-xl font-bold">GIG-GENERATOR</h1>
-        </div>
+        </Link>
 
         {/* Center Section */}
         <div className="flex flex-col items-left justify-center flex-grow space-y-16 mt-20">

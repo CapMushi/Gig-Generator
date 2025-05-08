@@ -19,7 +19,6 @@
       "@/*": ["src/*"],
       "@lib/*": ["lib/*"],
       "@models/*": ["models/*"]
-      
     },
     "plugins": [
       {

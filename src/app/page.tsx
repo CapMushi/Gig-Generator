@@ -8,8 +8,8 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-12 text-center lg:text-left">
+      <section className="py-0 px-6">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-12 text-left">
           {/* Logo */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <img

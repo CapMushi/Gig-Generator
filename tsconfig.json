@@ -16,6 +16,7 @@
     "baseUrl": ".", // ✅ Project root
     "paths": {
       "@/*": ["./src/*"],
+      "@/*": ["src/*"],
       "@lib/*": ["lib/*"],
       "@models/*": ["models/*"]
       
